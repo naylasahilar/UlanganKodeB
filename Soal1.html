@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 1</title>
+</head>
+<body>
+    <h2>Data Kendaraan</h2>
+
+    <script>
+        // Membuat array kendaraan
+        var kendaraan = [
+          "mobil",
+          "motor",
+          "sepeda",
+          "pesawat",
+          "kapal",
+          "kereta",
+          "truk",
+          "helikopter",
+          "sepeda motor",
+          "perahu"
+        ];
+
+        // Menampilkan seluruh data dalam array
+        document.write("<p>Seluruh Data Kendaraan:</p>");
+        document.write("<ul>");
+        for (var i = 0; i < kendaraan.length; i++) {
+            document.write("<li>" + kendaraan[i] + "</li>");
+        }
+        document.write("</ul>");
+
+        // Mengakses nilai "mobil" pada indeks ke berapa
+        var indexMobil = kendaraan.indexOf("mobil");
+        document.write("<p>Indeks Mobil: " + indexMobil + "</p>");
+
+        // Menghapus 1 data kendaraan dengan unshift
+        var kendaraanYangDihapus = kendaraan.shift();
+        document.write("<p>Data Kendaraan yang Dihapus: " + kendaraanYangDihapus + "</p>");
+        
+        document.write("<p>Data Kendaraan Setelah Penghapusan:</p>");
+        document.write("<ul>");
+        for (var j = 0; j < kendaraan.length; j++) {
+            document.write("<li>" + kendaraan[j] + "</li>");
+        }
+        document.write("</ul>");
+    </script>
+</body>
+</html>

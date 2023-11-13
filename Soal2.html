@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 2</title>
+</head>
+<body>
+    <label for="jumlahPerulangan">Masukkan jumlah perulangan:</label>
+    <input type="number" id="jumlahPerulangan" min="1" value="1">
+    <button onclick="tampilkanKalimat()">Tampilkan Kalimat</button>
+
+    <p id="hasilPerulangan"></p>
+
+    <script>
+        function tampilkanKalimat() {
+            // Mendapatkan nilai input dari pengguna
+            var jumlahPerulangan = document.getElementById("jumlahPerulangan").value;
+
+            // Memastikan nilai input adalah bilangan bulat positif
+            if (jumlahPerulangan > 0 && Number.isInteger(+jumlahPerulangan)) {
+                var kalimat = "Saya orang yang sabar, ramah, dan tidak membenci orang.";
+                var hasilPerulangan = "";
+
+                // Melakukan perulangan sebanyak jumlah yang dimasukkan pengguna
+                for (var i = 0; i < jumlahPerulangan; i++) {
+                    hasilPerulangan += kalimat + "<br>";
+                }
+
+                // Menampilkan hasil perulangan
+                document.getElementById("hasilPerulangan").innerHTML = hasilPerulangan;
+            } else {
+                alert("Masukkan jumlah perulangan yang valid (bilangan bulat positif).");
+            }
+        }
+    </script>
+</body>
+</html>
